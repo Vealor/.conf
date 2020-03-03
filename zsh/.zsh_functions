@@ -1,0 +1,48 @@
+# System Functions
+# ~/.zsh_functions
+################################################################################
+#twitch
+TWITCHSOURCES="monstercat roguedragontv summit1g"
+function gettwitch {
+  for TWITCHER in $( echo "$TWITCHSOURCES" ); do
+    echo "======== $TWITCHER >>>"
+    youtube-dl -F https://twitch.tv/$TWITCHER | egrep -v --color=never "twitch:stream|info"
+  done
+}
+function starttwitch {
+  mpv --no-config --ytdl-format=$2 https://www.twitch.tv/$1 &
+}
+################################################################################
+#weather
+function getweather {
+  curl -s wttr.in/$1 |egrep -v "Follow"|egrep -v "feature"
+}
+################################################################################
+#youtube
+# TO DO:  add support for just end link for TY, add soundcloud? other?
+function ytm { #music
+  mpv $1 --loop-playlist=inf --autofit-larger=30%x30% &>/dev/null &
+}
+function ytv { #video
+  mpv $1 --autofit-larger=50%x50% &>/dev/null &
+}
+function ytplay {
+  YTSEARCHSTRING="${@}"
+  YTSEARCHSTRING=${YTSEARCHSTRING// /\+}
+  YTLINK=`curl -s https://www.youtube.com/results\?search_query\=$YTSEARCHSTRING| grep -o -m 1 \/watch\?v=.*\"\ c| awk -F'[="]' '{print $2}'`
+  mpv "https://www.youtube.com/watch?v=$YTLINK" --autofit-larger=20%x20% &>/dev/null &
+}
+################################################################################
+#sensors
+function sensorloop {
+  while true ; do
+    clear
+    sensors
+    sleep 2
+  done
+}
+################################################################################
+#input
+function doclick {
+  xdotool click --repeat $1 --delay 1 1
+}
