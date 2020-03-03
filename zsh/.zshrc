@@ -87,6 +87,10 @@ alias la='ls -AG'
 alias l='ls -CFG'
 
 ################################################################################
+### Python (pyenv)
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 ### NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
