@@ -11,19 +11,6 @@ fi
 zmodload zsh/complist
 autoload -Uz compinit
 compinit -D
-# Alias definitions
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
-fi
-# Function definitions
-if [ -f ~/.zsh_functions ]; then
-    . ~/.zsh_functions
-fi
-# System specfic modifications
-if [ -f ~/.zsh_sysspec ]; then
-    . ~/.zsh_sysspec
-fi
-
 
 # Prompt
 #------------------------------
@@ -106,3 +93,16 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Alias definitions
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
+# Function definitions
+if [ -f ~/.zsh_functions ]; then
+    . ~/.zsh_functions
+fi
+# System specfic modifications
+if [ -f ~/.zsh_sysspec ]; then
+    . ~/.zsh_sysspec
+fi
