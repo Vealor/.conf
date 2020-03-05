@@ -11,6 +11,8 @@ fi
 zmodload zsh/complist
 autoload -Uz compinit
 compinit -D
+# load bashcompinit for some old bash completions
+autoload bashcompinit && bashcompinit
 
 # Prompt
 #------------------------------
