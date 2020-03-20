@@ -1,5 +1,6 @@
 syntax enable
 set number
+set ruler
 set hlsearch
 
 

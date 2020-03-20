@@ -2,6 +2,8 @@
 # ~/.zsh_aliases
 ################################################################################
 
+alias doupdate="echo '== SYS UPDATE ==' && softwareupdate -l && echo '== BREW UPDATE ==' && brew update && echo '== BREW UPGRADE ==' && brew upgrade"
+
 #networking
 alias myip="curl ipecho.net/plain ; echo"
 alias localip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
