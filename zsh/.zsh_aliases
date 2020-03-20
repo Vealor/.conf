@@ -2,7 +2,7 @@
 # ~/.zsh_aliases
 ################################################################################
 
-alias doupdate="echo '== SYS UPDATE ==' && softwareupdate -l && echo '== BREW UPDATE ==' && brew update && echo '== BREW UPGRADE ==' && brew upgrade"
+alias upd="echo '== SYS UPDATE ==' && softwareupdate -l && echo '== BREW UPDATE ==' && brew update && echo '== BREW UPGRADE ==' && brew upgrade"
 
 #networking
 alias myip="curl ipecho.net/plain ; echo"
@@ -30,3 +30,9 @@ alias g="grep -rni ./ -e "
 alias null="/dev/null"
 alias vi='vim'
 alias df='df -kTh'
+
+#dev
+alias server="python -m SimpleHTTPServer"
+alias dpsa="docker ps -a"
+alias dcup="docker-compose up"
+alias dcupd="docker-compose up -d"

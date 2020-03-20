@@ -2,10 +2,20 @@
 # ~/.zshrc
 ################################################################################
 ### DEFAULT SOURCED
+export ZSH=$HOME/.oh-my-zsh
 # Source global definitions
 if [ -f /etc/zshrc ]; then
 	 . /etc/zshrc
 fi
+
+ZSH_THEME="af-magic"
+plugins=(git tig docker docker-compose golang pip)
+plugins+=( history history-substring-search httpie sudo postgres )
+plugins+=( osx lein node npm jump gulp mosh )
+plugins+=( k z alias-tips )
+plugins+=( zsh-completions zsh-syntax-highlighting )
+
+source $ZSH/oh-my-zsh.sh
 
 # autocompletions
 zmodload zsh/complist
@@ -13,36 +23,11 @@ autoload -Uz compinit
 compinit -D
 # load bashcompinit for some old bash completions
 autoload bashcompinit && bashcompinit
+# Make zsh know about hosts already accessed by SSH
+zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
-# Prompt
-#------------------------------
-autoload -U colors zsh/terminfo
-colors
-
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' check-for-staged-changes true
-zstyle ':vcs_info:*' stagedstr '%F{2}*'
-zstyle ':vcs_info:*' unstagedstr '%F{1}*'
-zstyle ':vcs_info:git*' formats " %F{14}%b%u%c%m%{$reset_color%}"
-precmd() { vcs_info }
-
-setprompt() {
-  setopt prompt_subst
-
-  PS1=${(j::Q)${(Z:Cn:):-$'
-    %F{4}%~%f
-    ${vcs_info_msg_0_}
-    %F{5}%(1j. %j.)%f
-    " "
-    %(?.%F{10}.%F{1})$%f
-    " "
-  '}}
-}
-setprompt
 ################################################################################
-### QOL
+### QoL
 # Don't put duplicate lines in the history and do not add lines that start with a space
 export HISTCONTROL=erasedups:ignoredups:ignorespace
 PROMPT_COMMAND='history -a'
