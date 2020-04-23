@@ -2,7 +2,7 @@ syntax enable
 set number
 set ruler
 set hlsearch
-
+set backspace=indent,eol,start
 
 
 filetype plugin indent on
