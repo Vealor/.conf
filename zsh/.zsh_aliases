@@ -19,7 +19,7 @@ alias mkdir='mkdir -p'
 
 #git
 alias ggraph="git log --graph --oneline --decorate --color --all"
-alias gitcleanup="git branch --merged| egrep -v '(^\*|master|dev|qa|testing|staging|develop|stage)'| xargs git branch -d"
+alias gitcleanup="git branch --merged| egrep -v '(^\*|main|release)'| xargs git branch -d"
 
 #custom aliases
 alias q="exit"
