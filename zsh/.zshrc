@@ -95,3 +95,7 @@ fi
 if [ -f ~/.zsh_sysspec ]; then
     . ~/.zsh_sysspec
 fi
+
+################################################################################
+### App-specific intialization
+eval $(thefuck --alias)
