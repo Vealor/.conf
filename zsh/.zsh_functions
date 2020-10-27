@@ -13,6 +13,12 @@ function starttwitch {
   mpv --no-config --ytdl-format=$2 https://www.twitch.tv/$1 &
 }
 ################################################################################
+function do_idle {
+  TIME=298
+  [ ! -z "$1" ] && TIME=$1
+  while true; do cliclick c:.; sleep $TIME; done
+}
+################################################################################
 #weather
 function getweather {
   curl -s wttr.in/$1 |egrep -v "Follow"|egrep -v "feature"
