@@ -2,7 +2,7 @@
 # ~/.zsh_aliases
 ################################################################################
 
-alias upd="echo '== SYS UPDATE ==' && softwareupdate -l && echo '== BREW UPDATE ==' && brew update && echo '== BREW UPGRADE ==' && brew upgrade && brew cask upgrade --greedy"
+alias upd="echo '== SYS UPDATE ==' && softwareupdate -l && echo '== BREW UPDATE ==' && brew update && echo '== BREW UPGRADE ==' && brew upgrade && brew upgrade --cask --greedy"
 
 #networking
 alias myip="curl ipecho.net/plain ; echo"
