@@ -1,4 +1,5 @@
 [init]
+	defaultBranch = main
 [core]
   editor        = vim
   whitespace    = off
