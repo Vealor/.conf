@@ -37,6 +37,6 @@ if [ ! -d "$ZSH_BASE_FOLDER/zsh-syntax-highlighting" ] ; then git clone https://
 if [ ! -d "$ZSH_BASE_FOLDER/zsh-autosuggestions" ] ; then git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_BASE_FOLDER/zsh-autosuggestions; fi
 
 
-echo '== SYS UPDATE ==' && softwareupdate -l
-echo '== BREW UPDATE ==' && brew update
+echo '== SYS   UPDATE ==' && softwareupdate -l
+echo '== BREW  UPDATE ==' && brew update
 echo '== BREW UPGRADE ==' && brew upgrade
