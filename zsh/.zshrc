@@ -11,7 +11,7 @@ fi
 ZSH_THEME="af-magic"
 plugins=(git tig docker docker-compose golang pip)
 plugins+=( history history-substring-search httpie sudo postgres )
-plugins+=( osx lein node npm jump gulp mosh )
+plugins+=( macos lein node npm jump gulp mosh )
 plugins+=( k z )
 plugins+=( alias-tips )
 plugins+=( zsh-completions zsh-syntax-highlighting )
