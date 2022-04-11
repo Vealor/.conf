@@ -34,3 +34,7 @@ activate
 vendor/bundle
 .bundle/config
 .vscode
+
+
+# PYTHON ------------
+.python-version

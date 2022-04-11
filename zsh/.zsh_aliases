@@ -37,3 +37,8 @@ alias server="python -m SimpleHTTPServer"
 alias dpsa="docker ps -a"
 alias dcup="docker-compose up"
 alias dcupd="docker-compose up -d"
+
+
+#7R Rosetta x86
+alias brew_arm64='/opt/homebrew/bin/brew'
+alias brew='/usr/local/bin/brew'
