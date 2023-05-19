@@ -108,3 +108,14 @@ eval $(thefuck --alias)
 # 7R
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.2
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/vealorr/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vealorr/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/vealorr/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/vealorr/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PY3_RUNTIME=true

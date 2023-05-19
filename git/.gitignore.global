@@ -38,3 +38,5 @@ vendor/bundle
 
 # PYTHON ------------
 .python-version
+
+google-cloud-sdk

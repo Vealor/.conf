@@ -17,10 +17,8 @@
   cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
   trustExitCode = true
 [user]
-  name  = Vealorr
+  name = vealorr
   email = jakob.roberts@sevenrooms.com
-[github]
-  user = vealor
 [alias]
   a = add
   b = branch
