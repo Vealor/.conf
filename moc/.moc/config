@@ -1,0 +1,7 @@
+MusicDir = /home/vealor/Music
+StartInMusicDir = yes
+Repeat = yes
+Shuffle = yes
+
+Theme = transparent-background
+XTermTheme = transparent-background
